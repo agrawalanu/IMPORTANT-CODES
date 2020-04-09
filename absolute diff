@@ -1,0 +1,15 @@
+ {
+      vector<int> A;
+      
+    int b[A.size()], c[A.size()];
+    for(int i =0; i<A.size(); i++)
+    {
+       b[i]= A[i]+i;
+       c[i] = A[i] - i;
+    }
+    
+    int d = abs(*max_element(b, b+A.size())- *min_element(b, b+ A.size()));
+    int e = abs(*max_element(c, c+A.size())- *min_element(c, c+ A.size()));
+    return max(d, e);
+}
+// |a[i]-a[j]| + |i-j|
