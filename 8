@@ -1,0 +1,7 @@
+class Solution {
+public:
+int removeElement(vector& vec, int val) {
+vec.erase(std::remove(vec.begin(), vec.end(), val),vec.end());
+return vec.size();
+}
+};
